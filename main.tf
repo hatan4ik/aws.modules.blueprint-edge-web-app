@@ -114,7 +114,7 @@ module "waf" {
 # 3. Distribution. Every sibling contract is passed directly: no jsondecode,
 # hand-written IAM statement, ARN surgery, or provider alias.
 module "distribution" {
-  source = "git::https://github.com/hatan4ik/aws.modules.cloudfront.git?ref=4a272fa6e74f739ef8ad409b9bac490da463a733" # immutable main, v2 release pending
+  source = "git::https://github.com/hatan4ik/aws.modules.cloudfront.git?ref=e502e14fd44cedb7833bc1f74fc328184c88a4a8" # immutable main, v2 release pending
 
   name        = var.name
   aliases     = local.aliases
