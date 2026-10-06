@@ -1,0 +1,7 @@
+scan:
+  skip-dirs:
+    - .terraform
+    # Checkov downloads complete leaf repositories, including their disposable
+    # integration fixtures, here. Each leaf is scanned in its own CI; scan the
+    # blueprint and its examples here rather than unrelated fixture roots.
+    - .external_modules

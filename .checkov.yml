@@ -1,0 +1,12 @@
+download-external-modules: true
+
+# A private S3 origin is natively multi-AZ; this US-only edge blueprint does
+# not claim multi-region origin DR. The WAF composition includes
+# AWSManagedRulesKnownBadInputsRuleSet (Log4j patterns), but Checkov cannot
+# resolve dynamically rendered leaf-module values. The same limitation makes
+# it miss the explicitly passed TLSv1.2_2021 viewer policy; the CloudFront leaf
+# rejects every TLS 1.0/1.1 policy at variable validation.
+skip-check:
+  - CKV_AWS_310
+  - CKV_AWS_192
+  - CKV_AWS_174
