@@ -4,6 +4,15 @@ All notable changes follow [Keep a Changelog](https://keepachangelog.com/en/1.1.
 
 ## [Unreleased]
 
+## [1.0.1] - 2026-10-06
+
+### Fixed
+
+- Run release-gate contract tests on Terraform 1.8.5, matching the root quality
+  job and its `override_module` test semantics.
+
+## [1.0.0] - 2026-10-06
+
 ### Added
 
 - Initial edge web application composition using immutable S3, ACM, CloudFront, WAF, KMS, and Route 53 leaf pins.
