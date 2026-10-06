@@ -35,6 +35,7 @@ CloudFront viewer certificates and CloudFront-scope WAF resources belong in `us-
 
 - S3 Block Public Access remains enabled on both buckets.
 - Origin reads are limited to `cloudfront.amazonaws.com` and the exact distribution ARN.
+- Every CloudFront cache behavior inherits AWS's managed SecurityHeadersPolicy unless the leaf contract is explicitly overridden.
 - TLS and encrypted-upload deny statements apply to the origin policy.
 - WAF request logs use a dedicated KMS key whose policy grant is limited to the exact log group ARN.
 - CloudFront admits United States viewer locations by default; changing the allowlist is an explicit environment decision.

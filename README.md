@@ -64,6 +64,7 @@ See [docs/DESIGN.md](docs/DESIGN.md) for ownership, dependency ordering, securit
 ## Security and availability baseline
 
 - TLS-only public endpoint with ACM-managed renewal and CloudFront's secure viewer policy from the leaf module.
+- AWS managed CloudFront SecurityHeadersPolicy on every cache behavior (HSTS, `nosniff`, `SAMEORIGIN`, and strict referrer policy).
 - No public S3 origin; CloudFront OAC is scoped by `AWS:SourceArn` to one distribution.
 - United States-only viewer allowlist by default; widen `geo_restriction` explicitly for an approved audience.
 - AWS WAF Common, Known Bad Inputs (including Log4j patterns), and Amazon IP Reputation managed groups, plus a per-IP rate limit.
