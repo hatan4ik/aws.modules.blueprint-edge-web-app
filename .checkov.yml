@@ -9,8 +9,10 @@ download-external-modules: true
 #   logs use a scoped customer-managed KMS key. Origin KMS policy would depend
 #   on the distribution ARN and create a key/bucket/distribution cycle.
 # - The distribution receives a real us-east-1 ACM certificate, TLSv1.2_2021,
-#   and a WAF containing AWSManagedRulesKnownBadInputsRuleSet. Checkov cannot
-#   resolve those dynamic values through the external leaf modules.
+#   AWS's managed SecurityHeadersPolicy, and a WAF containing
+#   AWSManagedRulesKnownBadInputsRuleSet. Checkov cannot resolve those dynamic
+#   values through the external leaf modules; the CloudFront leaf's own tests
+#   assert the response_headers_policy_id on every behavior.
 skip-check:
   - CKV_AWS_310
   - CKV_AWS_192
@@ -23,3 +25,4 @@ skip-check:
   - CKV_AWS_57
   - CKV_AWS_144
   - CKV_AWS_145
+  - CKV2_AWS_32
