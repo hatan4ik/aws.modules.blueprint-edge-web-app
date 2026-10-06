@@ -107,7 +107,7 @@ This is an edge/static-site blueprint, not a multi-region application backend. A
 |------|--------|---------|
 | <a name="module_access_logs_bucket"></a> [access\_logs\_bucket](#module\_access\_logs\_bucket) | git::https://github.com/hatan4ik/aws.modules.s3.git | d71da6cd3a3a13bb5fba896c4b1b67da9674b2f9 |
 | <a name="module_certificate"></a> [certificate](#module\_certificate) | git::https://github.com/hatan4ik/aws.modules.acm.git | b42bd50a7c53444dfbd7c6c9a86581c19988f1b5 |
-| <a name="module_distribution"></a> [distribution](#module\_distribution) | git::https://github.com/hatan4ik/aws.modules.cloudfront.git | 4a272fa6e74f739ef8ad409b9bac490da463a733 |
+| <a name="module_distribution"></a> [distribution](#module\_distribution) | git::https://github.com/hatan4ik/aws.modules.cloudfront.git | e502e14fd44cedb7833bc1f74fc328184c88a4a8 |
 | <a name="module_dns"></a> [dns](#module\_dns) | git::https://github.com/hatan4ik/aws.modules.route53.git//modules/records | cf1cfadeac17bfc0a7a8bdb502d3ea3228160d1d |
 | <a name="module_origin_bucket"></a> [origin\_bucket](#module\_origin\_bucket) | git::https://github.com/hatan4ik/aws.modules.s3.git | d71da6cd3a3a13bb5fba896c4b1b67da9674b2f9 |
 | <a name="module_origin_bucket_policy"></a> [origin\_bucket\_policy](#module\_origin\_bucket\_policy) | git::https://github.com/hatan4ik/aws.modules.s3.git//modules/bucket-policy | d71da6cd3a3a13bb5fba896c4b1b67da9674b2f9 |
